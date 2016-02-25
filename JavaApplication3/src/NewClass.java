@@ -13,5 +13,7 @@ public class NewClass {
     int precio;
     int valor;
     String nombre;
+    int b=6;
     System.out.println("HOLA");
+    
 }
