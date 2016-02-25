@@ -11,5 +11,5 @@
 public class NewClass {
     
     int precio;
-    
+    int valor;
 }
