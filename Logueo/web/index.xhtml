@@ -12,11 +12,11 @@
                 
                 <h2>Usuario</h2>
                 <p>Inicie Sesión Por favor</p>
-                <p><h:inputText id="Usuario" value="#{logueo.nombre}" /></p>
-                <p><h:inputSecret id="Contraseña" value="#{logueo.contraseña}" /></p>
+                <p><h:inputText id="Usuario" value="#{ingresar.nombre}" /></p>
+                <p><h:inputSecret id="Contraseña" value="#{ingresar.contraseña}" /></p>
                 <h:messages errorStyle="color: red;list-style:none;"/>
                 <section class="seccionBotones">
-                    <h:commandButton value="Ingresar" action="#{logueo.login}" />
+                    <h:commandButton value="Ingresar" action="#{ingresar.login()}" />
                 </section>
                 </h:form>
  
