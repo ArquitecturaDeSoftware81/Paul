@@ -1,0 +1,11 @@
+body
+{
+    background-color: black;
+    font-family: sans-serif;
+}
+.contenedorLogin
+{
+    margin-top: 100px;
+    text-align: center;
+    width: 100%;
+}
