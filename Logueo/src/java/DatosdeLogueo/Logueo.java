@@ -5,11 +5,14 @@
  */
 package DatosdeLogueo;
 
+import com.sun.xml.ws.transport.tcp.server.glassfish.ServletFakeArtifactSet;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
+import javax.faces.view.facelets.FaceletContext;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequestWrapper;
 
 /**
  *
@@ -36,14 +39,14 @@ public String Login ()
         if(nombre.equals("upt") && contraseña.equals("12345"))
         {
            responde.getSession().setAttribute("Sesion Usuario", nombre);
-           facesmensaje= new FacesMessage(FacesMessage.SEVERITY_INFO,"Acceso Correcto",null);
+           facesmensaje= new FacesMessage(FacesMessage.SEVERITY_INFO,"Acceso Correcto", null);
            acceder.addMessage(null, facesmensaje);
            return "menuP";
         }
         else
         {
-           responde.getSession().setAttribute("Sesion Usuario", nombre);
-           facesmensaje= new FacesMessage(FacesMessage.SEVERITY_ERROR,"Usuario o Contraseña incorrecto",null);
+           responde.getSession().setAttribute("Sesión Usuario", nombre);
+           facesmensaje= new FacesMessage(FacesMessage.SEVERITY_ERROR, "Acceso Incorrecto", null);
            acceder.addMessage(null, facesmensaje);
            return "error";
         }
